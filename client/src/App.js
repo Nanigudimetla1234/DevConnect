@@ -15,7 +15,7 @@ import  Profiles  from "./components/profiles/Profiles";
 import  Posts  from "./components/posts/Posts";
 import  Post  from "./components/post/Post";
 import PrivateRoute from "./components/routing/PrivateRoute";
-
+import NotFound from "./components/layout/NotFound";
 //Redux
 import { Provider } from "react-redux";
 import store from "./store";
@@ -64,6 +64,7 @@ const App = () => {
             <Route path='/posts/:id' element={<Post />} />
           </Route>
           
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </Provider>
